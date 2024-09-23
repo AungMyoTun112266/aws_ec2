@@ -41,9 +41,9 @@ resource "aws_security_group" "private_linux_host_sg" {
 
   # Inbound Rule: Allow SSH from your IP address
   ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
     security_groups = [aws_security_group.bastion_host_sg.id]
   }
 

@@ -1,9 +1,9 @@
 
 resource "aws_subnet" "private_subnet" {
-  vpc_id            = data.aws_vpc.default.id
-  cidr_block        = "172.31.48.0/20" 
-  availability_zone = "ap-northeast-1a"
-  map_public_ip_on_launch = false  
+  vpc_id                  = data.aws_vpc.default.id
+  cidr_block              = "172.31.48.0/20"
+  availability_zone       = "ap-northeast-1a"
+  map_public_ip_on_launch = false
 
   tags = {
     Name = "Private Subnet"
